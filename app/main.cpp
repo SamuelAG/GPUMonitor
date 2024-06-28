@@ -1,6 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <gpumonitorlib.h>
+#include <amdgpusource.h>
 
 int main(int argc, char *argv[])
 {
@@ -8,6 +9,7 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     qmlRegisterType<GPUMonitorLib>("GPUMonitorLib", 1, 0, "GPUMonitorLib");
+    qmlRegisterType<AmdGPULib>("AmdGPULib", 1, 0, "AmdGPULib");
     const QUrl url(QStringLiteral("qrc:/Main.qml"));
     QObject::connect(
         &engine,
@@ -17,8 +19,8 @@ int main(int argc, char *argv[])
         Qt::QueuedConnection);
     engine.load(url);
 
+    AmdGPULib amd_lib;
 
-    GPUMonitorLib lib;
 
     return app.exec();
 }

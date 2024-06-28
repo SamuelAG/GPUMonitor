@@ -18,10 +18,12 @@ qt_add_executable(GPUMonitorApp
 
 
 target_include_directories(GPUMonitorApp PRIVATE ../lib/)
+target_include_directories(GPUMonitorApp PRIVATE ../AmdGPULib/)
 
 target_link_libraries(GPUMonitorApp
     PRIVATE Qt6::Quick
     GPUMonitor-lib
+    AmdGPULib
 )
 
 include(GNUInstallDirs)

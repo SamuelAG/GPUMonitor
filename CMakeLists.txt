@@ -7,5 +7,7 @@ project(
     LANGUAGES CXX
 )
 
+add_subdirectory(interfaces)
+add_subdirectory(AmdGPULib)
 add_subdirectory(app)
 add_subdirectory(lib)
