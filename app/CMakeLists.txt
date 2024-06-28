@@ -8,16 +8,19 @@ find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup()
 
+set(CMAKE_AUTORCC ON)
+
 qt_add_executable(GPUMonitorApp
     main.cpp
+    qmlSources.qrc
 )
 
-qt_add_qml_module(GPUMonitorApp
-    URI GPUMonitor
-    VERSION 1.0
-    QML_FILES
-        Main.qml
-)
+#qt_add_qml_module(GPUMonitorApp
+#    URI GPUMonitor
+#    VERSION 1.0
+#    QML_FILES
+#        Main.qml
+#)
 
 target_include_directories(GPUMonitorApp PRIVATE ../lib/)
 
