@@ -9,5 +9,5 @@ project(
 
 add_subdirectory(interfaces)
 add_subdirectory(AmdGPULib)
-add_subdirectory(app)
-add_subdirectory(lib)
+add_subdirectory(GPUMonitorApp)
+add_subdirectory(GPULib)

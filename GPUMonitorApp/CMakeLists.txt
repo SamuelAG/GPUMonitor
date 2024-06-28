@@ -17,7 +17,7 @@ qt_add_executable(GPUMonitorApp
 
 
 
-target_include_directories(GPUMonitorApp PRIVATE ../lib/)
+target_include_directories(GPUMonitorApp PRIVATE ../GPULib/)
 target_include_directories(GPUMonitorApp PRIVATE ../AmdGPULib/)
 
 target_link_libraries(GPUMonitorApp
