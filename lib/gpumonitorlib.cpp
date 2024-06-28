@@ -3,5 +3,5 @@
 GPUMonitorLib::GPUMonitorLib(QObject *parent)
     : QObject{parent}
 {
-    qDebug()<<"merda"<<Qt::endl;
+    qDebug()<<"GPUMonitorLib init"<<Qt::endl;
 }
