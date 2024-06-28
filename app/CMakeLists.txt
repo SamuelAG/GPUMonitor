@@ -26,6 +26,13 @@ target_link_libraries(GPUMonitorApp
     AmdGPULib
 )
 
+set_target_properties(GPUMonitorApp
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+)
+
 include(GNUInstallDirs)
 install(TARGETS GPUMonitorApp
     BUNDLE DESTINATION .

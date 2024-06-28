@@ -13,11 +13,17 @@ target_sources(AmdGPULib
     "amdgpusource.cpp"
     "amdgpusource.h"
 )
-
 target_include_directories(AmdGPULib PRIVATE 3rdParty)
 
 target_link_libraries(AmdGPULib
     PRIVATE Qt6::Quick
+)
+
+set_target_properties(AmdGPULib
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
 )
 
 include(GNUInstallDirs)

@@ -14,6 +14,13 @@ target_sources(GPUMonitor-lib
     "gpumonitorlib.h"
 )
 
+set_target_properties(GPUMonitor-lib
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+)
+
 target_link_libraries(GPUMonitor-lib
     PRIVATE Qt6::Quick
 )

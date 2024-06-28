@@ -9,6 +9,12 @@ target_sources(Interfaces
     "gpuinfo.h"
 )
 
+set_target_properties(Interfaces
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+    RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../bin"
+)
 
 include(GNUInstallDirs)
 target_include_directories(Interfaces PUBLIC "include")
