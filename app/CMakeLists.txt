@@ -15,12 +15,7 @@ qt_add_executable(GPUMonitorApp
     qmlSources.qrc
 )
 
-#qt_add_qml_module(GPUMonitorApp
-#    URI GPUMonitor
-#    VERSION 1.0
-#    QML_FILES
-#        Main.qml
-#)
+
 
 target_include_directories(GPUMonitorApp PRIVATE ../lib/)
 
